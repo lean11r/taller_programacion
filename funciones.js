@@ -6,13 +6,15 @@ function calcular_imc(event) {
     peso = document.getElementById("peso").value;
     zap = document.getElementById("img_peso");
     imc = peso/(altura*altura);
-    document.getElementById("resu").innerText = imc;
+    document.getElementById("resu").innerText = "imc" +
+    imc.toFixed(2);
 
-    if (imc < 18.5){
-        zap.setAttribute("src", "homeroflaco.png");
-    }else if(imc > 18.6 && imc < 24.9){
-        zap.setAttribute("src", "homeronormal.png");
-    } else{
-        zap.setAttribute("src", "homeroobeso.png") ;
+    if (imc < 18.5) {
+        zap.setAttribute("src", "homeroflacoo.png");
+    }else if (imc > 18.5 && imc < 24.9)   {
+        zap.setAttribute("src", "homeronormaal.png");
+    } else 
+    {
+        zap.setAttribute("src", "homeroobeso_2.png") ;
      }
 }
